@@ -12,6 +12,10 @@ public class Stats {
     private static double media;
     private static double desviacion_estandar;
 
+    /**
+     * Método el cual hace la lectura del archivo por línea y los añade a una lista cada que hace lectura de uno
+     * @param filePath archivo para hacer lectura
+     */
     public static void calculator(String filePath){
         List<Double> numbers = new MyLinkedList<Double>();
         Path file = Paths.get(String.valueOf(filePath));
