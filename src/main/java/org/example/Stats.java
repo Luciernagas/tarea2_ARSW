@@ -12,7 +12,7 @@ public class Stats {
     private static double media;
     private static double desviacion_estandar;
 
-    public static void calculator(FileReader filePath){
+    public static void calculator(String filePath){
         List<Double> numbers = new MyLinkedList<Double>();
         Path file = Paths.get(String.valueOf(filePath));
         Charset charset = Charset.forName("UTF-8");
@@ -54,10 +54,10 @@ public class Stats {
         double media = avg(lista);
 
         for (int i = 0; i < longitud; i++){
-            double operacion = Math.pow((lista.get(i) - media), 2);
+            sumaDiferenciaAlCuadrado += Math.pow((lista.get(i) - media), 2);
         }
 
-        return Math.sqrt(sumaDiferenciaAlCuadrado / longitud);
+        return Math.round(Math.sqrt(sumaDiferenciaAlCuadrado / (longitud-1)) * 100) / 100.0;
     }
 
     public static double getavg(){

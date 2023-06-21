@@ -13,10 +13,6 @@ public class Node<T> {
         return data;
     }
 
-    public void set (T e){
-        data = e;
-    }
-
     public void setNext(Node<T> n){
         next = n;
     }

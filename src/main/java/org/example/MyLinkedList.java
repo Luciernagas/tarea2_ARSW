@@ -6,15 +6,9 @@ import java.util.List;
 import java.util.ListIterator;
 
 public class MyLinkedList<T> implements List<T> {
-    T obj;
     private Node<T> firstNode = null;
     private Node<T> lastNode = null;
     private int longitud;
-
-    @Override
-    public int size() {
-        return longitud;
-    }
 
     @Override
     public boolean isEmpty() {
@@ -54,6 +48,11 @@ public class MyLinkedList<T> implements List<T> {
         }
         longitud ++;
         return true;
+    }
+
+    @Override
+    public int size() {
+        return longitud;
     }
 
     @Override
